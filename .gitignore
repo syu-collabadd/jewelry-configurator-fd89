@@ -7,3 +7,4 @@ public/assets/parts
 .DS_Store
 *.log
 .burrow-port
+.gstack/

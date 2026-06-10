@@ -9,9 +9,10 @@
     "dev:server": "tsx watch server/index.ts",
     "dev": "concurrently -k -n client,server -c blue,magenta \"npm:dev:client\" \"npm:dev:server\"",
     "build:client": "tsc -b && vite build",
+    "build:server": "tsc -p tsconfig.server.json",
     "build:assets": "node scripts/generate-assets.mjs",
-    "build": "npm run build:assets && npm run build:client",
-    "start": "node --enable-source-maps dist-server/index.js",
+    "build": "npm run build:assets && npm run build:client && npm run build:server",
+    "start": "node --enable-source-maps dist-server/server/index.js",
     "preview": "vite preview"
   },
   "dependencies": {
