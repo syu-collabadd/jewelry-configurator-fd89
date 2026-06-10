@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.server.tsbuildinfo",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "outDir": "dist-server",
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": true
+  },
+  "include": ["server", "shared"]
+}

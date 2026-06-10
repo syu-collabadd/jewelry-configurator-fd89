@@ -1,0 +1,43 @@
+{
+  "name": "tenluma-configurator",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "TENLUMA — modular jewelry configurator. Customer story → approved Part Master → 2D bracelet preview.",
+  "scripts": {
+    "dev:client": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "dev": "concurrently -k -n client,server -c blue,magenta \"npm:dev:client\" \"npm:dev:server\"",
+    "build:client": "tsc -b && vite build",
+    "build:assets": "node scripts/generate-assets.mjs",
+    "build": "npm run build:assets && npm run build:client",
+    "start": "node --enable-source-maps dist-server/index.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "openai": "^4.73.0",
+    "pngjs": "^7.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.9.0",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
